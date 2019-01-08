@@ -1,0 +1,46 @@
+.logo-button {
+  > span {
+    display: flex !important;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+
+  > svg {
+    display: block;
+    position: relative;
+    line-height: 0;
+    width: 20px;
+    height: 20px;
+    > g {
+      fill: #fff;
+    }
+  }
+
+  > span {
+    display: inline-block;
+  }
+}
+
+.toolbar-section {
+  height: 80px;
+  
+  > .title {
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+}
+
+.toolbar-menu {
+  z-index: 1;
+  position: relative;
+  height: 56px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+}

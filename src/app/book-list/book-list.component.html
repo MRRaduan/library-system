@@ -1,0 +1,38 @@
+<mat-table [dataSource]='dataSource' class="mat-elevation-z8 table">
+  <!-- Select -->
+  <ng-container matColumnDef="select">
+    <mat-header-cell *matHeaderCellDef>
+      <mat-checkbox
+        color="primary"
+      >
+      </mat-checkbox>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-checkbox
+        color="primary"
+      >
+      </mat-checkbox>
+    </mat-cell>
+  </ng-container> 
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="publishingCompany">
+    <mat-header-cell *matHeaderCellDef> Editora </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.publishingCompany }} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="isbn">
+    <mat-header-cell *matHeaderCellDef> ISBN </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.isbn }} </mat-cell>
+  </ng-container>
+
+   <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

@@ -1,0 +1,15 @@
+.main-container {
+  width: calc(100% - 60px);
+  max-width: 1000px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 60px auto;
+}
+
+
+.info-cards {
+  width: 100%;
+  margin: 0 20px;
+}
