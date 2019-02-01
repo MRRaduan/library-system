@@ -37,11 +37,17 @@ export class BookListComponent implements OnInit {
   selection = new SelectionModel<Book>(true, []);
 
 
-
   constructor() { }
 
+  toggleStatus = true;
+
+  toggleEdit(el) {
+    this.toggleStatus = !this.toggleStatus;
+    // this.element.edit = this.e
+  }
+
   ngOnInit() {
-    console.log(this.selection);
+    // console.log(this.selection);
   }
 
 }

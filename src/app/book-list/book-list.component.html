@@ -18,7 +18,20 @@
   <!-- Position Column -->
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    <mat-cell *matCellDef="let element">
+      <ng-container *ngIf="toggleStatus">
+        <span (click)="toggleEdit(element.isbn)">
+          {{ element.name }} 
+        </span>
+      </ng-container>
+      <ng-container *ngIf="!toggleStatus">
+        <input
+          (focusout)="toggleEdit()"
+          matInput placeholder="{{ element.name }}"
+          value="{{ element.name }}"
+        >
+      </ng-container> 
+    </mat-cell>
   </ng-container>
 
   <!-- Name Column -->
